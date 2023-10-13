@@ -30,7 +30,7 @@ export class AuthPage implements OnInit {
       this.firebaseSvc.login(this.form.value as User).then(async res => {
         console.log(res);
         let user: User = {
-          uid: res.user.uid,
+          user_id: res.user.uid,
           name: res.user.displayName,
           email: res.user.email
         }

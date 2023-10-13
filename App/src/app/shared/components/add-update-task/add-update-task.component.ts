@@ -48,7 +48,7 @@ export class AddUpdateTaskComponent  implements OnInit {
   }
 
   createTask(){
-    let path = `users/${this.user.uid}`;
+    let path = `users/${this.user.user_id}`;
 
     this.utilsSvc.presentLoading();
     delete this.form.value.id;
@@ -78,7 +78,7 @@ export class AddUpdateTaskComponent  implements OnInit {
   }
 
   updateTask(){
-    let path = `users/${this.user.uid}/tasks/${this.task.id}`;
+    let path = `users/${this.user.user_id}/tasks/${this.task.id}`;
 
     this.utilsSvc.presentLoading();
     delete this.form.value.id;

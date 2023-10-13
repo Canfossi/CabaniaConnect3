@@ -43,7 +43,7 @@ export class SignUpPage implements OnInit {
         console.log(res);
         await this.firebaseSvc.updateUser({ displayName: this.form.value.name})
         let user: User = {
-          uid: res.user.uid,
+          user_id: res.user.uid,
           name: res.user.displayName,
           email: res.user.email
         }
